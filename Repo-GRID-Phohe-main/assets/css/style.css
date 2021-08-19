@@ -1,0 +1,304 @@
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    padding: 0;
+}
+
+
+body{
+    background-color: #F5F5F5;
+}
+
+/*GRID Grid-Area*/
+.container{
+    background-color: white;
+    grid-template-columns: minmax(200px, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "header"
+                         "header-foto-menu"
+                         "header-foto1-3"
+                         "main"
+                         "info-main"
+                         "footer";
+                         
+}
+
+/* END GRID Grid-Area*/
+
+
+/*header*/
+.header{
+    grid-area: header;
+    padding: 20px 0px;
+  
+    
+}
+
+ul > li{
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+
+
+.logo p{
+    font-size: 35px;
+}
+
+.logo-style{
+    color: #B9B9B9;
+}
+
+.border{
+    border: 1px solid #F5F5F5;
+}
+
+
+/*End Header*/
+
+
+
+
+
+
+/*header FOTO*/
+
+.ul-foto{
+    background-color: #2D2D2D;
+}
+
+.ul-foto li{
+    color: white;
+}
+
+.header-foto-menu{
+    grid-area: header-foto-menu;
+    grid-template-columns: auto;
+    grid-template-rows: auto minmax(auto, 400px);
+
+}
+
+.heaeder-foto{
+    margin-top: -16px;
+    background-image: url(/assets/img/yuriy-bogdanov-MIkxc6WV9QA-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    min-height: 100px;
+    
+  
+ 
+   
+    
+}
+
+.header-foto1-3{
+    grid-area: header-foto1-3;
+    margin-top: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px;
+    gap: 20px;
+    
+
+    
+}
+
+
+.cell-1{
+    background-image: url(/assets/img/1.jpg);
+    background-repeat: no-repeat;
+    box-shadow: 0 0 10px black;
+}
+
+.cell-2{
+    background-image: url(/assets/img/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 10px black;
+}
+
+.cell-3{
+    background-image: url(/assets/img/3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 0 5px black;
+
+}
+
+
+
+
+
+/* END header FOTO*/
+
+/*Main*/
+
+.main{
+    grid-area: main;
+    grid-template-rows: 1fr 1fr 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+
+
+/* END Main*/
+
+/*Info-Main*/
+
+.info-main{
+    grid-area: info-main;
+    padding: 50px;
+}
+/*END Info-Main*/
+
+/*Footer*/
+
+.footer{
+    grid-area: footer;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,fr);
+    text-align: center;
+    
+}
+
+.a1 {
+    color: black;
+    text-transform: uppercase;
+}
+
+
+.footer-black{
+    background-color: #2D2D2D;
+    min-height: 40px;
+    
+    margin-top: 20px;
+    border-radius: 5px;
+  
+}
+
+.footer-black p{
+    margin-left: 40px;
+    text-align: center;
+    color: white;
+}
+
+
+
+/*End Footer*/
+
+
+.card-img-top{
+    min-height: 100px;
+}
+
+.card{
+    box-shadow: 0 0 4px black;
+}
+
+
+
+
+/*MEDIA*/
+
+@media (max-width: 764px){
+    .container{
+        max-width: 99vw;
+        padding: 0;
+        
+        
+    }
+}
+
+
+@media (max-width: 768px){
+    .card{
+        min-height: 100px;
+        max-width: 90%;
+        margin: 0 auto;
+        
+    }
+}
+
+
+@media (max-width: 768px){
+    .heaeder-foto{
+     min-height: 200px;
+        
+    }
+}
+
+
+
+@media (max-width: 768px){
+    .ul-foto{
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 768px){
+      
+    .header-ul{
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100vw;
+    }
+}
+
+
+@media (max-width: 768px){
+    .main{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12,1fr);
+        margin: 0 auto;
+        
+
+    }
+      
+   
+}
+
+
+@media (max-width: 768px){
+      
+    .header-foto1-3{
+        display: grid;
+        height: 300px;
+        width: 100vw;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr 1fr;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px){
+    .footer-black{
+       width: 90vw;
+       margin: 0 auto;
+       margin-top: 40px;
+      
+        
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+/*END MEDIA*/
+
+
+
+
